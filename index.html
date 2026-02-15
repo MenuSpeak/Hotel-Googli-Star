@@ -94,17 +94,6 @@
             }
         }
 
-
-
-
-
-
-
-
-
-
-
-
         :root {
             --bg: #0b0b0d;
             --surface: #0f1114;
@@ -295,7 +284,251 @@
             border: 2px solid #c62828;
         }
 
-        /* Location Link Section - Added at bottom */
+        /* Social Media Links Section */
+        .social-links-section {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 30px 20px;
+            margin: 20px 0;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: var(--ff-heading);
+            font-size: 2rem;
+            color: var(--gold2);
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gold1), var(--gold2));
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .social-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(4px);
+        }
+
+        .social-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
+            border-color: var(--gold1);
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold1), var(--gold2));
+            color: #0b0b0d;
+            font-size: 24px;
+        }
+
+        .review-card .social-icon {
+            background: linear-gradient(135deg, #4285f4, #34a853);
+            color: white;
+        }
+
+        .facebook-card .social-icon {
+            background: linear-gradient(135deg, #1877f2, #0e5ab3);
+            color: white;
+        }
+
+        .instagram-card .social-icon {
+            background: linear-gradient(135deg, #f58529, #d62976, #962fbf, #4f5bd5);
+            color: white;
+        }
+
+        .threads-card .social-icon {
+            background: linear-gradient(135deg, #000000, #333333);
+            color: white;
+        }
+
+        .social-name {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--gold2);
+        }
+
+        .social-handle {
+            font-size: 14px;
+            color: var(--muted);
+            text-align: center;
+        }
+
+        .review-text {
+            font-size: 14px;
+            color: var(--muted);
+            text-align: center;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+
+        /* Payment QR Section */
+        .qr-section {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 40px 20px;
+            margin: 20px 0;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
+        }
+
+        .qr-container {
+            max-width: 400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 24px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .qr-title {
+            color: #0b0b0d;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-family: var(--ff-heading);
+        }
+
+        .qr-subtitle {
+            color: #4a4a4a;
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .qr-code-wrapper {
+            background: white;
+            padding: 20px;
+            border-radius: 16px;
+            margin: 20px 0;
+            border: 2px solid var(--gold1);
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .qr-code-wrapper:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        }
+
+        .qr-code {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .qr-overlay {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(212, 175, 55, 0.9);
+            color: #0b0b0d;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .upi-details {
+            background: #f5f5f5;
+            border-radius: 12px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .upi-id {
+            color: #0b0b0d;
+            font-size: 18px;
+            font-weight: 700;
+            font-family: monospace;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .upi-mobile {
+            color: #4a4a4a;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .scan-instruction {
+            color: #0b0b0d;
+            font-size: 14px;
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .scan-instruction svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--gold1);
+        }
+
+        .google-pay-badge {
+            background: #000;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .google-pay-badge svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+
+        /* Location Link Section */
         .location-link-section {
             background: rgba(255, 255, 255, 0.03);
             border-radius: 12px;
@@ -1111,6 +1344,31 @@
                 display: none;
             }
         }
+
+        /* Modal for QR Code Fullscreen */
+        .qr-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .qr-modal.active {
+            display: flex;
+        }
+
+        .qr-modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 16px;
+        }
     </style>
 </head>
 
@@ -1200,7 +1458,95 @@
             </section>
         </main>
 
-        <!-- Location Link Section - Added at bottom -->
+        <!-- Social Media Links Section -->
+        <div class="social-links-section">
+            <h2 class="section-title">Connect With Us</h2>
+            <div class="social-grid">
+                <!-- Google Review Link -->
+                <a href="https://g.page/hotel-googli-star/review?gm" target="_blank" class="social-card review-card">
+                    <div class="social-icon">⭐</div>
+                    <div class="social-name">Google Review</div>
+                    <div class="review-text">
+                        जर आपल्याला आमच्या होटल गुगली स्टारचं जेवण आवड़त असेल तर<br>
+                        कृपया आपलं बहुमूल्य अभिप्राय (Review) आमच्या गुगल पेज वर शेयर करा
+                    </div>
+                    <div class="social-handle">Click to Review →</div>
+                </a>
+
+                <!-- Facebook Link -->
+                <a href="https://www.facebook.com/share/1Tkh2ZfGvX/" target="_blank" class="social-card facebook-card">
+                    <div class="social-icon">f</div>
+                    <div class="social-name">Facebook</div>
+                    <div class="social-handle">@hotelgooglistar</div>
+                </a>
+
+                <!-- Instagram Link -->
+                <a href="https://www.instagram.com/hotelgooglistar?igsh=ZGNoc3dlbHZueHRr" target="_blank" class="social-card instagram-card">
+                    <div class="social-icon">📷</div>
+                    <div class="social-name">Instagram</div>
+                    <div class="social-handle">@hotelgooglistar</div>
+                </a>
+
+                <!-- Threads Link -->
+                <a href="https://www.threads.com/@hotelgooglistar" target="_blank" class="social-card threads-card">
+                    <div class="social-icon">⨁</div>
+                    <div class="social-name">Threads</div>
+                    <div class="social-handle">@hotelgooglistar</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Payment QR Section -->
+        <div class="qr-section">
+            <h2 class="section-title">Pay via UPI / QR</h2>
+            <div class="qr-container">
+                <div class="google-pay-badge">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
+                    </svg>
+                    Google Pay
+                </div>
+                <div class="qr-title">HOTEL GOOGLI STAR</div>
+                <div class="qr-subtitle">+91 90291 84613</div>
+                
+                <div class="qr-code-wrapper" onclick="openQRModal()">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEAAQMAAABmvDolAAAABlBMVEX///8AAABVwtN+AAAB4ElEQVR42uyYMW7DMAxFbQyBp+zJcwJfIPfg4d6jU+gGuYGOThmyZzN8CguBZJq0Kf+yaT4h6VcQeY9PIkACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJPD/BH4BbLgLQ/xhE18AAAAASUVORK5CYII="
+                         alt="Google Pay QR Code" class="qr-code">
+                    <div class="qr-overlay">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"></circle>
+                            <circle cx="15.5" cy="8.5" r="1.5" fill="currentColor"></circle>
+                            <circle cx="8.5" cy="15.5" r="1.5" fill="currentColor"></circle>
+                            <circle cx="15.5" cy="15.5" r="1.5" fill="currentColor"></circle>
+                        </svg>
+                        Scan
+                    </div>
+                </div>
+
+                <div class="upi-details">
+                    <div class="upi-id">9029184613@okbizaxis</div>
+                    <div class="upi-mobile">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12" y2="18" stroke-width="4"></line>
+                        </svg>
+                        +91 90291 84613
+                    </div>
+                </div>
+
+                <div class="scan-instruction">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12v3a2 2 0 01-2 2H5a2 2 0 01-2-2V9a2 2 0 012-2h14"></path>
+                        <circle cx="12" cy="12" r="1" fill="currentColor"></circle>
+                        <path d="M12 8v8M8 12h8"></path>
+                    </svg>
+                    Scan to pay via any UPI app
+                </div>
+            </div>
+        </div>
+
+        <!-- Location Link Section - Updated with new maps link -->
         <div class="location-link-section">
             <div class="location-link-header">
                 <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1210,7 +1556,7 @@
                 <h3>Find Us on Google Maps</h3>
             </div>
             <div class="map-link-container">
-                <a href="https://maps.app.goo.gl/KUgeWGyNUR8sjXHq9" target="_blank" class="map-link">
+                <a href="https://maps.app.goo.gl/pE4XLfqzrjAvpzyM6" target="_blank" class="map-link">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
                         <circle cx="12" cy="10" r="3"></circle>
@@ -1219,6 +1565,12 @@
                 </a>
             </div>
         </div>
+    </div>
+
+    <!-- QR Code Fullscreen Modal -->
+    <div class="qr-modal" id="qrModal" onclick="closeQRModal()">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEAAQMAAABmvDolAAAABlBMVEX///8AAABVwtN+AAAB4ElEQVR42uyYMW7DMAxFbQyBp+zJcwJfIPfg4d6jU+gGuYGOThmyZzN8CguBZJq0Kf+yaT4h6VcQeY9PIkACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJEACJPD/BH4BbLgLQ/xhE18AAAAASUVORK5CYII="
+             alt="Google Pay QR Code - Full Size">
     </div>
 
     <!-- Cart Button -->
@@ -1964,7 +2316,7 @@
   { "id": 608, "cat": "SPL_DISHES_CHICKEN", "name": "चिकन मुर्ग मुसल्लम (Chi. Murg Musallam - 5Pax)", "price": "600.00 RS", "desc": "Whole roasted spiced chicken for 5 persons", "tags": ["Non-Veg"], "img": "img/chi_murg_musallam_5pax.jpeg" },
 
   { "id": 609, "cat": "SPL_DISHES_MUTTON", "name": "मटन आगरी स्पेशल (Mutton Agri - 5Pax)", "price": "750.00 RS", "desc": "Traditional Agri style mutton for 5 persons", "tags": ["Non-Veg"], "img": "img/mutton_agri_5pax.jpeg" },
-  { "id": 610, "cat": "SPL_DISHES_MUTTON", "name": "मटन आगरी स्पेशल (Mutton Agri - 3Pax)", "price": "450.00 RS", "desc": "Traditional Agri style mutton for 3 persons", "tags": ["Non-Veg"], "img": "img/mutton_agri_5pax.jpeg" },
+  { "id": 610, "cat": "SPL_DISHES_MUTTON", "name": "मटन आगरी स्पेशल (Mutton Agri - 3Pax)", "price": "450.00 RS", "desc": "Traditional Agri style mutton for 3 persons", "tags": ["Non-Veg"], "img": "img/mutton_agri_3pax.jpeg" },
 
   { "id": 611, "cat": "THALI_NON_VEG", "name": "चिकन थाली (Chicken Thali)", "price": "260.00 RS", "desc": "1 Chi Curry, 1 Sukkha Chi., Jeera Rice, 3 Chapati, Papad, Salad", "tags": ["Non-Veg"], "img": "img/chicken_thali.jpeg" },
   { "id": 612, "cat": "THALI_NON_VEG", "name": "मटन थाली (Mutton Thali)", "price": "320.00 RS", "desc": "1 Mutton Curry, 1 Sukkha Mutton, Jeera Rice, 3 Chapati, Papad, Salad", "tags": ["Non-Veg"], "img": "img/mutton_thali.jpeg" },
@@ -2168,7 +2520,7 @@
                 let totalAmount = 0;
 
                 cart.forEach(item => {
-                    const price = parseInt(item.price.replace('₹', ''));
+                    const price = parseFloat(item.price.replace(' RS', ''));
                     const itemTotal = price * item.quantity;
                     totalAmount += itemTotal;
 
@@ -2176,7 +2528,7 @@
             <div class="cart-item">
               <div class="item-info">
                 <div class="item-name">${item.name}</div>
-                <div class="item-price">${item.price}</div>
+                <div class="item-price">₹${price}</div>
               </div>
               <div class="item-quantity">
                 <button class="quantity-btn" onclick="updateQuantity(${item.id}, -1)">-</button>
@@ -2255,31 +2607,32 @@
             if (deliveryType === 'restaurant') {
                 const tableNumber = document.getElementById('tableNumber').value.trim();
 
-                message += `**Delivery Type:** Dine-in\n`;
-                message += `**Table Number:** ${tableNumber}\n\n`;
+                message += `*Delivery Type:* Dine-in\n`;
+                message += `*Table Number:* ${tableNumber}\n\n`;
             } else {
                 const customerName = document.getElementById('customerName').value.trim();
                 const customerMobile = document.getElementById('customerMobile').value.trim();
                 const customerAddress = document.getElementById('customerAddress').value.trim();
 
-                message += `**Delivery Type:** Home Delivery\n`;
-                message += `**Name:** ${customerName}\n`;
-                message += `**Mobile:** ${customerMobile}\n`;
-                message += `**Address:** ${customerAddress}\n\n`;
+                message += `*Delivery Type:* Home Delivery\n`;
+                message += `*Name:* ${customerName}\n`;
+                message += `*Mobile:* ${customerMobile}\n`;
+                message += `*Address:* ${customerAddress}\n\n`;
             }
 
-            message += `**Order Details:**\n`;
+            message += `*Order Details:*\n`;
 
             cart.forEach(item => {
-                message += `• ${item.name} - ${item.quantity} x ${item.price}\n`;
+                const price = parseFloat(item.price.replace(' RS', ''));
+                message += `• ${item.name} - ${item.quantity} x ₹${price}\n`;
             });
 
             const totalAmount = cart.reduce((sum, item) => {
-                const price = parseInt(item.price.replace('₹', ''));
+                const price = parseFloat(item.price.replace(' RS', ''));
                 return sum + (price * item.quantity);
             }, 0);
 
-            message += `\n**Total Amount:** ₹${totalAmount}\n\n`;
+            message += `\n*Total Amount:* ₹${totalAmount}\n\n`;
             message += `Thank you!`;
 
             // Encode the message for WhatsApp URL
@@ -2304,7 +2657,9 @@
                 return;
             }
 
-            menuGrid.innerHTML = items.map(item => `
+            menuGrid.innerHTML = items.map(item => {
+                const priceValue = parseFloat(item.price.replace(' RS', ''));
+                return `
         <div class="card" data-cat="${item.cat}">
           <div class="card-header">
             <div class="thumb">
@@ -2319,11 +2674,11 @@
             </div>
           </div>
           <div class="card-footer">
-            <div class="price">${item.price}</div>
-            <button class="btn-primary" onclick="addToCart(${JSON.stringify(item).replace(/"/g, '&quot;')}, this)">Add to Cart</button>
+            <div class="price">₹${priceValue}</div>
+            <button class="btn-primary" onclick='addToCart(${JSON.stringify({...item, price: `₹${priceValue}`})}, this)'>Add to Cart</button>
           </div>
         </div>
-      `).join('');
+      `}).join('');
         }
 
         // Filter menu items by category
@@ -2380,6 +2735,15 @@
         window.removeFromCart = removeFromCart;
         window.updateQuantity = updateQuantity;
         window.selectDeliveryOption = selectDeliveryOption;
+
+        // QR Code Modal Functions
+        function openQRModal() {
+            document.getElementById('qrModal').classList.add('active');
+        }
+
+        function closeQRModal() {
+            document.getElementById('qrModal').classList.remove('active');
+        }
     </script>
 </body>
 
